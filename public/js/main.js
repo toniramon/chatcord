@@ -15,13 +15,13 @@ socket.emit('joinRoom', { username, room });
 
 // Get room and users
 socket.on('roomUsers', ({ room, users }) => {
-  outputRoomName(room);
+  // outputRoomName(room);
   outputUsers(users);
 });
 
 // Message from server
 socket.on('message', (message) => {
-  console.log(message);
+  // console.log(message);
   outputMessage(message);
 
   // Scroll down
@@ -65,10 +65,10 @@ function outputMessage(message) {
   document.querySelector('.chat-messages').appendChild(div);
 }
 
-// Add room name to DOM
-function outputRoomName(room) {
-  roomName.innerText = room;
-}
+// // Add room name to DOM
+// function outputRoomName(room) {
+//   roomName.innerText = room;
+// }
 
 // Add users to DOM
 function outputUsers(users) {
